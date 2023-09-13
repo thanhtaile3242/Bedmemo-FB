@@ -37,11 +37,49 @@
         }
     }
     &__account {
+        position: relative;
         margin-left: 10%;
+        #account {
+            opacity: 0;
+            visibility: hidden;
+        }
+        #account:checked + .account__list {
+            opacity: 1;
+            visibility: visible;
+        }
         i {
             cursor: pointer;
             font-size: 5rem;
             color: var(--main-blue);
+        }
+        .account__list {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 120%;
+            min-width: 130px;
+            padding: 5px;
+            border: 2px solid var(--light-gray);
+            background-color: white;
+            border-radius: 10px;
+            a {
+                display: grid;
+                grid-template-columns: 25px auto;
+                gap: 10px;
+                line-height: 40px;
+                i {
+                    justify-self: center;
+                    align-self: center;
+                    font-size: 20px;
+                    color: var(--rich-gray);
+                }
+                span {
+                    color: black;
+                }
+                &:hover {
+                    background-color: var(--main-gray);
+                }
+            }
         }
     }
 }
@@ -143,6 +181,7 @@
         .slideshow {
             position: relative;
             .slides {
+                width: 100%;
                 display: none;
                 border-radius: 10px;
             }
@@ -196,7 +235,7 @@
                 margin-top: 30px;
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                column-gap: 20px;
+                column-gap: 40px;
                 .btn__a {
                     text-align: center;
                     min-width: 23%;

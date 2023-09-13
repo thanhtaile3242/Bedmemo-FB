@@ -1,0 +1,154 @@
+// header (create-F and create-Q)
+.header {
+    padding: 15px 3%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 3px 9px 0px;
+    &__icon {
+        i {
+            color: var(--main-blue);
+            font-size: 30px;
+        }
+    }
+}
+// main
+.main {
+    padding: 35px 4%;
+    background-color: var(--main-gray);
+    display: grid;
+    grid-template-columns: 30% 68%;
+    gap: 2%;
+    // Left
+    &__left {
+        padding: 70px 0 0 20px;
+        .left__info {
+            margin-bottom: 30px;
+            .text-input {
+                border: 0;
+                font-weight: 200;
+                font-size: 25px;
+                background-color: var(--main-gray);
+                width: 90%;
+                border-bottom: 2px solid black;
+            }
+            .text-name {
+                font-size: 20px;
+                margin-top: 5px;
+            }
+        }
+        .left__btn {
+            text-align: center;
+            button {
+                display: inline-block;
+                background-color: #2a388f;
+                color: white;
+                padding: 5px 10px;
+                font-size: 25px;
+                border-radius: 10px;
+            }
+        }
+    }
+    // Right
+    &__right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        // Form
+        .form-Q {
+            margin-bottom: 35px;
+            &__number {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 40px;
+                background-color: white;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                margin-bottom: 3px;
+                span {
+                    font-weight: 700;
+                }
+                i {
+                    color: black;
+                }
+            }
+            //question
+            &__question {
+                margin-bottom: 10px;
+                textarea {
+                    width: 100%;
+                    font-size: 25px;
+                    padding: 20px;
+                    text-align: center;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                }
+            }
+            // answer
+            &__answers {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                gap: 15px;
+                .answers__item {
+                    padding: 10px;
+                    background-color: white;
+                    border-radius: 10px;
+                    display: flex;
+                    //
+                    .choice--blue {
+                        background-color: #2a388f;
+                    }
+                    .choice--orange {
+                        background-color: #f7961b;
+                    }
+                    //
+                    .item__choice {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 5px;
+                        width: 50px;
+                        span {
+                            font-size: 30px;
+                            color: white;
+                            font-weight: 700;
+                        }
+                    }
+                    //
+                    .item__content {
+                        width: 100%;
+                        position: relative;
+                        textarea {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 80%;
+                            font-size: 16px;
+                            padding: 5px 5px 5px 25px;
+                        }
+                        input[type="radio"] {
+                            position: absolute;
+                            right: 1%;
+                            top: 0;
+                            transform: translateY(-50%);
+                            transform: scale(2);
+                            accent-color: green;
+                        }
+                    }
+                }
+            }
+        }
+        // Add button
+        .right__btn {
+            text-align: center;
+            button {
+                display: inline-block;
+                letter-spacing: 1px;
+                color: black;
+                border-bottom: 5px solid #f7961b;
+            }
+        }
+    }
+}
