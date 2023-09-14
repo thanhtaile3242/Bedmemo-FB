@@ -83,11 +83,15 @@ body {
 }
 .main__left .left__info .text-input {
   border: 0;
-  font-weight: 200;
   font-size: 25px;
   background-color: var(--main-gray);
-  width: 90%;
+  width: 100%;
   border-bottom: 2px solid black;
+  letter-spacing: 1px;
+}
+.main__left .left__info ::placeholder {
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 .main__left .left__info .text-name {
   font-size: 20px;
@@ -129,10 +133,11 @@ body {
   color: black;
 }
 .main__right .form-Q__question {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .main__right .form-Q__question textarea {
   width: 100%;
+  height: 100%;
   font-size: 25px;
   padding: 20px;
   text-align: center;
@@ -174,6 +179,7 @@ body {
   position: relative;
 }
 .main__right .form-Q__answers .answers__item .item__content textarea {
+  height: 100%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -181,11 +187,13 @@ body {
   font-size: 16px;
   padding: 5px 5px 5px 25px;
 }
+.main__right .form-Q__answers .answers__item .item__content ::placeholder {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
 .main__right .form-Q__answers .answers__item .item__content input[type=radio] {
   position: absolute;
   right: 1%;
-  top: 0;
-  transform: translateY(-50%);
   transform: scale(2);
   accent-color: green;
 }
